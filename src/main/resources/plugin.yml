@@ -3,7 +3,7 @@ version: '${project.version}'
 main: steelrework.dynamicWorldFusion.DynamicWorldFusion
 api-version: '1.21'
 description: 'Nexus Core — оркестратор бесшовного мира между несколькими узлами'
-authors: ['steelrework']
+authors: ['sxkadamn']
 website: 'https://github.com/sxkadamn/DynamicWorldFusion'
 commands:
   nexuschunk:
