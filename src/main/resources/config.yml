@@ -1,0 +1,95 @@
+# Главная секция настроек Nexus Core
+nexus:
+  # Режим запуска:
+  # "master" - центральный оркестратор
+  # "node"   - игровой узел
+  mode: "node"
+
+  master:
+    # Адрес и порт для входящих TCP-подключений узлов к Master
+    bind-host: "0.0.0.0"
+    bind-port: 25590
+    # Адрес и порт Master, к которым подключается Node
+    host: "127.0.0.1"
+    port: 25590
+
+  node:
+    # Уникальный ID текущего узла в кластере
+    id: "node-1"
+    # Логическая зона, закрепленная за узлом
+    zone: "zone-a"
+
+  heartbeat:
+    # Интервал heartbeat и load-report в тиках (20 тиков = 1 секунда)
+    interval-ticks: 20
+
+  load:
+    # Порог TPS, ниже которого узел считается перегруженным
+    overload-tps-threshold: 17.0
+    # Порог количества сущностей, выше которого узел считается перегруженным
+    overload-entities-threshold: 300
+
+  chunk:
+    # Таймаут ожидания ACK для одного фрейма чанка (мс)
+    retry-timeout-millis: 1200
+    # Максимум повторов отправки одного фрейма чанка
+    max-retries: 3
+    # Максимальный размер payload одного фрейма (байт)
+    frame-payload-bytes: 8192
+    # Время жизни незавершенного входящего stream (мс)
+    inbound-ttl-millis: 30000
+
+  ai:
+    # Включает AI-предиктор движения игроков для prefetch подсказок
+    enabled: true
+    # Глубина предсказания в чанках
+    lookahead-chunks: 500
+    # Минимальная скорость игрока (блоков за тик) для генерации подсказки
+    min-speed-blocks-per-tick: 0.35
+
+  entity-path:
+    # Включает межузловую синхронизацию графа преследования сущностей
+    enabled: true
+
+  resource-pack:
+    # Включает динамическое переключение ресурспака по биому
+    enabled: true
+    biome-prefix-to-url:
+      # Префикс биома -> URL ресурспака
+      "minecraft:desert": "https://example.com/packs/desert.zip"
+      # Префикс биома -> URL ресурспака
+      "minecraft:badlands": "https://example.com/packs/desert.zip"
+      # Префикс биома -> URL ресурспака
+      "minecraft:frozen": "https://example.com/packs/frozen.zip"
+      # Префикс биома -> URL ресурспака
+      "minecraft:snowy": "https://example.com/packs/frozen.zip"
+
+  observability:
+    # Включает HTTP API наблюдаемости и UI на Master
+    enabled: true
+    # Адрес и порт HTTP API/UI
+    bind-host: "0.0.0.0"
+    bind-port: 8099
+
+    websocket:
+      # Включает поток live-метрик через WebSocket
+      enabled: true
+      # Адрес и порт WebSocket сервера
+      bind-host: "0.0.0.0"
+      bind-port: 8100
+      # Период отправки live-обновлений в тиках
+      stream-interval-ticks: 20
+
+# Проверка обновлений через Spigot
+update:
+  enabled: true
+  # Уведомлять при входе игроков с правом dynamicworldfusion.update
+  notify-on-join: true
+  # ID ресурса на Spigot (заполните после публикации)
+  resource-id: 0
+
+# bStats метрики
+bstats:
+  enabled: true
+  # ID плагина на bStats (заполните после регистрации)
+  plugin-id: 0

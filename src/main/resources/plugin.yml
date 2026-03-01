@@ -1,0 +1,15 @@
+name: DynamicWorldFusion
+version: '${project.version}'
+main: steelrework.dynamicWorldFusion.DynamicWorldFusion
+api-version: '1.21'
+description: 'Nexus Core — оркестратор бесшовного мира между несколькими узлами'
+authors: ['steelrework']
+website: 'https://github.com/your-org/DynamicWorldFusion'
+commands:
+  nexuschunk:
+    description: 'Отправить тестовый фрейм чанка на другой узел'
+    usage: /nexuschunk <targetNodeId> <world> <chunkX> <chunkZ>
+permissions:
+  dynamicworldfusion.update:
+    description: 'Получать уведомления о новых версиях'
+    default: op
