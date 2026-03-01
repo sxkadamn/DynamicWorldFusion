@@ -1,5 +1,9 @@
 # DynamicWorldFusion
 
+![build](https://github.com/sxkadamn/DynamicWorldFusion/actions/workflows/build.yml/badge.svg)
+![release](https://github.com/sxkadamn/DynamicWorldFusion/actions/workflows/release.yml/badge.svg)
+![license](https://img.shields.io/badge/license-MIT-green.svg)
+
 **EN**
 
 DynamicWorldFusion (Nexus Core) is a multi-node orchestration plugin for Minecraft servers. It helps distribute world load between multiple nodes by assigning zones and moving them when needed. The built-in observability UI shows nodes, zones, players, and chunk activity in real time.

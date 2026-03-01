@@ -4,7 +4,7 @@ main: steelrework.dynamicWorldFusion.DynamicWorldFusion
 api-version: '1.21'
 description: 'Nexus Core — оркестратор бесшовного мира между несколькими узлами'
 authors: ['steelrework']
-website: 'https://github.com/your-org/DynamicWorldFusion'
+website: 'https://github.com/sxkadamn/DynamicWorldFusion'
 commands:
   nexuschunk:
     description: 'Отправить тестовый фрейм чанка на другой узел'
